@@ -1,8 +1,9 @@
 from a import wave
 
-def main():
-    global name
-    print("hello %s" % name)
+def main(conf):
+    print("in main, conf.a = %s" % conf['a'])
+    wave(conf)
 
-name="Rob"
-main()
+conf = { 'a': 12 }
+
+main(conf)
